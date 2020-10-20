@@ -10,9 +10,9 @@ dat <-  dbGetQuery(db_inova_dm, "SELECT * FROM BASE_MODELO")
 
 colnames(dat)[27] = 'maxCodPai'
 
-verifica <-  with(dat, !is.na(tmp_julg) & !is.na(classeProcessual) &
-                    !is.na(codigoOrgao) & !is.na(grau) & !is.na(dscSistema) &
-                    !is.na(procEl) & !is.na(tipo) & !is.na(esfera) &
+verifica <-  with(dat, !is.na(tmp_julg) & !is.na(classeprocessual) &
+                    !is.na(codigoorgao) & !is.na(grau) & !is.na(dscsistema) &
+                    !is.na(procel) & !is.na(tipo) & !is.na(esfera) &
                     !is.na(maxCodPai))
 
 dat <-  dat[verifica,]
@@ -49,3 +49,4 @@ modNN <-  neuralnetwork(X = dat[,-1],
                       verbose = T)
 
 write_ANN(modNN, 'nn.ann')
+
