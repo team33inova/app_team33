@@ -13,7 +13,7 @@ drv <- dbDriver("PostgreSQL")
 #connect postgresql
 db_con <- dbConnect(drv,
                     host   = "team33.ddns.net",
-                    dbname = "team33",
+                    dbname = "team33_dev",
                     user      = "team33",
                     password     = "team33",
                     port     = 5631)
