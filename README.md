@@ -24,71 +24,65 @@ Para medição do Estoque, foi considerado o primeiro movimento (mais antigo) co
 
 **Instalação**
 
+
 * PASSO 1: ETL
 Plataforma: TALEND OPEN STUDIO FOR DATA INTEGRATION
-
-1. IMPORTAR O JOB json2sqlite3 dentro do TALEND
-1.1. criar um novo projeto
-1.2. na aba Repository, clicar com o botão direito em” job Designs” e selecionar “Import itens”
-1.3. Select Archieve File
-1.4. Browse: selecionar o arquivo no repositório gitHub json2sqlite3
-1.5. Selecionar inova
-1.6. Finalizar
-
+  1. IMPORTAR O JOB json2sqlite3 dentro do TALEND
+    1.1 criar um novo projeto
+    1.2 na aba Repository, clicar com o botão direito em” job Designs” e selecionar “Import itens”
+    1.3 Select Archieve File
+    1.4 Browse: selecionar o arquivo no repositório gitHub json2sqlite3
+    1.5 Selecionar inova
+    1.6 Finalizar
 * PASSO 2: RODAR O JOB
-
-2.1 selecionar a pasta de origem dos json no componente tFileList_1
-2.2 selecionar o destino da base de dados .sdb nos componentes tdbOutput
+Plataforma: TALEND OPEN STUDIO FOR DATA INTEGRATION
+  2.1 selecionar a pasta de origem dos json no componente tFileList_1
+  2.2 selecionar o destino da base de dados .sdb nos componentes tdbOutput
 
 Observação: Para esse projeto, a base de dados relacional em formato .sdb se encontra já dentro do projeto R. Sendo assim, não há necessidade de rodar o ETL para instalar a aplicação nessa base atual. Caso queira expandir a base de dados, será necessário, obviamente, rodar esse formato de ETL para compor a base de dados referência da aplicação.
 
 * PASSO 3: DATA MINING
 Plataforma: RStudio
-
-3.1 abrir o projeto R “team33” no Rstudio
-3.2 executar primeiramente o arquivo data_mining.R
-
-Passo a passo do data_mining
-3.2.1 conexão na base exportada do talend: db_inova
-3.2.2 criar base .sdb de apoio: db_inova_dm
-3.3.3 baixar as tabelas dimensão disponíveis na pasta /dim do projeto para o R
-3.3.4 gravar as tabelas nas bases
-3.3.5 executar querys para limpeza dos dados:
-3.3.6 dados basicos: excluir processos com classes fora da TPU e serventias fora do MPM
-3.3.7 excluir movimentos fora de 1980 e 2020
-3.3.8 excluir assuntos fora da TPU
-3.3.9 excluir orgao julgador fora do MPM
-3.3.10 sincronizar todos os registros das tabelas após a exclusão gerando uma chave unica em comum
-3.3.11 “join” da chave unica com as tabelas
-3.3.12 criar data.frame: primeira baixa de cada processo : VAR_BX
-3.3.13 criar data.frame: primeiro movimento de cada processo : VAR_NV
-3.3.14 criar data.frame: primeirro julgamento de cada processo: VAR_JULG
-3.3.15 criar data.frame: processos pendentes: VAR_PDT
-3.3.16 criar data.frame: processos pendentes totalizados: VAR_PDT_TOT
-3.3.17 unir numa tabela tempos de julgamento, baixas e novos
-3.3.18 criar função para calcular o tempo entre as datas: dif_dt
-3.3.19 criar variaveis computadas atraves da função
-3.3.20 criar data.frame VAR_TEMP
-3.3.21 identificar assunto prinicipal do processo: VAR_ASS
-3.3.22 criar data.frame pra rodar rede neural: VAR_BASE
-3.3.23 ajustar data.frame para modelo: BASE_MODELO
-3.3.24 VACUUM 
-
-3.3 executar o arquivo estoque.R
-3.3.1 criar tibble da VAR_PDT_TOT da base inova_dm
-3.3.2 ajustar coluna data
-3.3.3 criar aquivo estoque.csv dentro do projeto
-
-3.4 executar o arquivo modelo.R
-3.4.1 criar data.frame: dat da BASE_MODELO
-3.4.2 excluir NA
-3.4.3 excluir tempo de julgamento igual a zero
-3.4.4 transformar co-variáveis em fatores
-3.4.5 selecionar as variáveis do modelo de rede neural
-3.4.6 treinar o modelo
-3.4.7 gravar modelo no Projeto
-
-3.5 executar o arquivo front end
+  3.1 abrir o projeto R “team33” no Rstudio
+  3.2 executar primeiramente o arquivo data_mining.R
+  Passo a passo do data_mining
+    3.2.1 conexão na base exportada do talend: db_inova
+    3.2.2 criar base .sdb de apoio: db_inova_dm
+    3.3.3 baixar as tabelas dimensão disponíveis na pasta /dim do projeto para o R
+    3.3.4 gravar as tabelas nas bases
+    3.3.5 executar querys para limpeza dos dados:
+    3.3.6 dados basicos: excluir processos com classes fora da TPU e serventias fora do MPM
+    3.3.7 excluir movimentos fora de 1980 e 2020
+    3.3.8 excluir assuntos fora da TPU
+    3.3.9 excluir orgao julgador fora do MPM
+    3.3.10 sincronizar todos os registros das tabelas após a exclusão gerando uma chave unica em comum
+    3.3.11 “join” da chave unica com as tabelas
+    3.3.12 criar data.frame: primeira baixa de cada processo : VAR_BX
+    3.3.13 criar data.frame: primeiro movimento de cada processo : VAR_NV
+    3.3.14 criar data.frame: primeirro julgamento de cada processo: VAR_JULG
+    3.3.15 criar data.frame: processos pendentes: VAR_PDT
+    3.3.16 criar data.frame: processos pendentes totalizados: VAR_PDT_TOT
+    3.3.17 unir numa tabela tempos de julgamento, baixas e novos
+    3.3.18 criar função para calcular o tempo entre as datas: dif_dt
+    3.3.19 criar variaveis computadas atraves da função
+    3.3.20 criar data.frame VAR_TEMP
+    3.3.21 identificar assunto prinicipal do processo: VAR_ASS
+    3.3.22 criar data.frame pra rodar rede neural: VAR_BASE
+    3.3.23 ajustar data.frame para modelo: BASE_MODELO
+    3.3.24 VACUUM 
+  3.4 executar o arquivo estoque.R
+    3.4.1 criar tibble da VAR_PDT_TOT da base inova_dm
+    3.4.2 ajustar coluna data
+    3.4.3 criar aquivo estoque.csv dentro do projeto
+  3.5 executar o arquivo modelo.R
+    3.5.1 criar data.frame: dat da BASE_MODELO
+    3.5.2 excluir NA
+    3.5.3 excluir tempo de julgamento igual a zero
+    3.5.4 transformar co-variáveis em fatores
+    3.5.5 selecionar as variáveis do modelo de rede neural
+    3.5.6 treinar o modelo
+    3.5.7 gravar modelo no Projeto
+  3.6 executar o arquivo front end
 
 ## 7. **Licenças utilizadas**
 * Apache (versão 2.0)
