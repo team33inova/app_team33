@@ -27,14 +27,13 @@ Para medição do Estoque, foi considerado o primeiro movimento (mais antigo) co
 * PASSO 1: ETL
 Plataforma: TALEND OPEN STUDIO FOR DATA INTEGRATION
 
-1: IMPORTAR O JOB json2sqlite3 dentro do TALEND
-
-1.1 criar um novo projeto
-1.2 na aba Repository, clicar com o botão direito em” job Designs” e selecionar “Import itens”
-1.3 Select Archieve File
-1.4 Browse: selecionar o arquivo no repositório gitHub json2sqlite3
-1.5 selecionar inova
-1.6 finish
+1. IMPORTAR O JOB json2sqlite3 dentro do TALEND
+1.1. criar um novo projeto
+1.2. na aba Repository, clicar com o botão direito em” job Designs” e selecionar “Import itens”
+1.3. Select Archieve File
+1.4. Browse: selecionar o arquivo no repositório gitHub json2sqlite3
+1.5. Selecionar inova
+1.6. Finalizar
 
 * PASSO 2: RODAR O JOB
 
