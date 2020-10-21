@@ -100,7 +100,7 @@ Seguindo, a aplicação é desenvolvida no ambiente *R*. É utilizado um banco .
 
 ### Estrutura da Rede Neural
 
-<img src="imagens/estruturaDaRede3.png" style="display: block; margin-left: auto; margin-right: auto; width: 30%;">
+<img src="imagens/estruturaDaRede33.png" style="display: block; margin-left: auto; margin-right: auto; width: 30%;">
 
 E o front end é suportado pelo pacote *Shinny*, ainda em ambiente *R*. O deploy foi realizado no servidor do *RShinny*.
 
