@@ -93,7 +93,11 @@ Observação: Para esse projeto, a base de dados relacional em formato .sdb se e
 ## 8. **Áreas de conhecimento e técnicas envolvidas**
 A aplicação abrange conhecimentos em **ETL**, especificamente o uso do *Talend Open Data Integration*, software open source, com o objetivo de transformar os arquivos .JSON em uma base relacional SQLITE3 (.sdb).
 Posteriomente, é exigido conhecimento em **SQL** no sentido de migrar a base .sdb para um banco de dados *PostgreSQL* a fim de servir a aplicação.
-Seguindo, a aplicação é desenvolvida no ambiente *R*. É utilizado um banco .sdb para dar suporte ao **Process Mining** dentro do ambiente. Após a mineração de dados, o modelo de **Rede Neural** é treinado usando o pacote *ANN2*. E o front end é suportado pelo pacote *Shinny*, ainda em ambiente *R*. O deploy foi realizado no servidor do *RShinny*.
+Seguindo, a aplicação é desenvolvida no ambiente *R*. É utilizado um banco .sdb para dar suporte ao **Process Mining** dentro do ambiente. Após a mineração de dados, o modelo de **Rede Neural** é treinado usando o pacote *ANN2*.
+
+<img src="imagens/estruturaDaRede3.png" style="display: block; margin-left: auto; margin-right: auto; width: 50%;">
+
+E o front end é suportado pelo pacote *Shinny*, ainda em ambiente *R*. O deploy foi realizado no servidor do *RShinny*.
 
 ## Licença
 [![CC0](http://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
