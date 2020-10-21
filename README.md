@@ -1,6 +1,6 @@
 <img src="cnjInova.webp.jpeg" style="display: block; margin-left: auto; margin-right: auto; width: 75%; padding-bottom: 50px">
 
-#RaioX
+# RaioX
 
 ## 1. **Na visão de vocês e referente ao desafio que escolheram qual é o problema que querem solucionar?**
 Bem como explicitado no Relato 03 do material de apoio: Relatos de Apoio - Personas, onde a persona especificada “gostaria de ter uma previsão de quanto tempo seu processo irá levar para ter uma decisão,”, e ainda, a baixa informação disponível pelo Judiciário quanto à informações de previsão em geral, o time 33 se propôs, como objetivo principal, desenvolver um método que seja capaz de estimar o tempo médio de julgamento de um processo, dado alguns parâmetros conhecidos da base do Datajud.
