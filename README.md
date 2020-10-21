@@ -83,6 +83,9 @@ Observação: Para esse projeto, a base de dados relacional em formato .sdb se e
     * 3.5.7 gravar modelo no Projeto
   * 3.6 executar o arquivo front end
 
+### Aplicação em Execução
+[Aplicação em Execução](https://www.youtube.com/watch?v=honOxzC_eeQ&feature=youtu.be)
+
 ## 7. **Licenças utilizadas**
 * Apache (versão 2.0)
 * ETL Talend Open Data Integration
