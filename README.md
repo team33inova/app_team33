@@ -1,5 +1,4 @@
 <img src="cnjInova.webp.jpeg" style="display: block; margin-left: auto; margin-right: auto; width: 75%; padding-bottom: 50px">
-<img src="cardiogram.png.jpeg" style="display: block; margin-left: auto; margin-right: auto; width: 20%;">
 <h2 style="text-align:center">RaioX</h2>
 
 ---
