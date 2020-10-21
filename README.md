@@ -95,7 +95,7 @@ A aplicação abrange conhecimentos em **ETL**, especificamente o uso do *Talend
 Posteriomente, é exigido conhecimento em **SQL** no sentido de migrar a base .sdb para um banco de dados *PostgreSQL* a fim de servir a aplicação.
 Seguindo, a aplicação é desenvolvida no ambiente *R*. É utilizado um banco .sdb para dar suporte ao **Process Mining** dentro do ambiente. Após a mineração de dados, o modelo de **Rede Neural** é treinado usando o pacote *ANN2*.
 
-<img src="imagens/estruturaDaRede3.png" style="display: block; margin-left: auto; margin-right: auto; width: 50%;">
+<img src="imagens/estruturaDaRede3.png" style="display: block; margin-left: auto; margin-right: auto; width: 30%;">
 
 E o front end é suportado pelo pacote *Shinny*, ainda em ambiente *R*. O deploy foi realizado no servidor do *RShinny*.
 
