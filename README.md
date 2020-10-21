@@ -25,7 +25,7 @@ Para medição do Estoque, foi considerado o primeiro movimento (mais antigo) co
 ### Instalação
 
 * PASSO 1: ETL
-Plataforma: TALEND OPEN STUDIO FOR DATA INTEGRATION
+(Plataforma: TALEND OPEN STUDIO FOR DATA INTEGRATION)
   * 1 IMPORTAR O JOB json2sqlite3 dentro do TALEND
     * 1.1 criar um novo projeto
     * 1.2 na aba Repository, clicar com o botão direito em” job Designs” e selecionar “Import itens”
@@ -34,14 +34,14 @@ Plataforma: TALEND OPEN STUDIO FOR DATA INTEGRATION
     * 1.5 Selecionar inova
     * 1.6 Finalizar
 * PASSO 2: RODAR O JOB
-Plataforma: TALEND OPEN STUDIO FOR DATA INTEGRATION
+(Plataforma: TALEND OPEN STUDIO FOR DATA INTEGRATION)
   * 2.1 selecionar a pasta de origem dos json no componente tFileList_1
   * 2.2 selecionar o destino da base de dados .sdb nos componentes tdbOutput
 
 Observação: Para esse projeto, a base de dados relacional em formato .sdb se encontra já dentro do projeto R. Sendo assim, não há necessidade de rodar o ETL para instalar a aplicação nessa base atual. Caso queira expandir a base de dados, será necessário, obviamente, rodar esse formato de ETL para compor a base de dados referência da aplicação.
 
 * PASSO 3: DATA MINING
-Plataforma: RStudio
+(Plataforma: RSTUDIO)
   * 3.1 abrir o projeto R “team33” no Rstudio
   * 3.2 executar primeiramente o arquivo data_mining.R
   * Passo a passo do data_mining
