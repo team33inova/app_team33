@@ -22,12 +22,11 @@ Para medição do Estoque, foi considerado o primeiro movimento (mais antigo) co
 * Na aba de previsão do tempo médio dos processos, o usuário imputa os parâmetros e a aplicação retorna o tempo médio de julgamento para o determinado processo.
 * Na aba de estoque processual, o usuário seleciona a serventia desejada e a aplicação retorna o estoque atual da serventia, e ainda um gráfico da série histórica da serventia.
 
-**Instalação**
-
+### Instalação
 
 * PASSO 1: ETL
 Plataforma: TALEND OPEN STUDIO FOR DATA INTEGRATION
-  * 1. IMPORTAR O JOB json2sqlite3 dentro do TALEND
+  * 1 IMPORTAR O JOB json2sqlite3 dentro do TALEND
     * 1.1 criar um novo projeto
     * 1.2 na aba Repository, clicar com o botão direito em” job Designs” e selecionar “Import itens”
     * 1.3 Select Archieve File
