@@ -1,5 +1,5 @@
-<img src="cnjInova.webp" style="display: block; margin-left: auto; margin-right: auto; width: 75%; padding-bottom: 50px">
-<img src="cardiogram.png" style="display: block; margin-left: auto; margin-right: auto; width: 20%;">
+<img src="cnjInova.webp.jpeg" style="display: block; margin-left: auto; margin-right: auto; width: 75%; padding-bottom: 50px">
+<img src="cardiogram.png.jpeg" style="display: block; margin-left: auto; margin-right: auto; width: 20%;">
 <h2 style="text-align:center">RaioX</h2>
 
 ---
@@ -17,7 +17,7 @@ Para tempo de julgamento, foi considerado o tempo entre o primeiro movimento do 
 Para medição do Estoque, foi considerado o primeiro movimento (mais antigo) como início do processo, e para a baixa foi considerado os movimentos 22, 246 e 488. Sendo assim, a partir da tag “dataHora” foi reconstruída a série histórica do Estoque processual para cada serventia a partir de 2015. 
 ---
 4. **Desenho da arquitetura do sistema e Fluxo de dados**
-![image](fluxoAplicacao.png)
+![image](fluxoAplicacao.png.jpeg)
 ---
 6. **Instruções de Uso**
 * Na aba de previsão do tempo médio dos processos, o usuário imputa os parâmetros e a aplicação retorna o tempo médio de julgamento para o determinado processo.
